@@ -1,0 +1,487 @@
+
+/* Universal tag for body */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Navbar-sections */
+.navbar {
+    box-shadow: 0 15px 40px -20px rgb(40 44 63/15%);
+    position: fixed;
+    /* position offsets */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+    padding: 0 20px;
+    
+}
+
+/* combination-selectors */
+.navbar .nav {
+max-width: 1200px;
+min-width: 1200px;
+position: relative;             /*position relative to parents which means nav is a child and navbar is a parent */
+margin: 0 auto;
+height: 80px;
+display: flex;                   /*flex is use for laying out and by default is always row */ 
+justify-content: space-between;   /*space between content*/
+
+}
+
+
+.nav .left-section{
+
+    display: flex;
+    align-items: center;
+}
+
+.Swiggy-logo{
+    display: block;
+    /*whichisinaninlineposition*/height: 50px;
+    margin-right: 17px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);   /*Transform property to transform the elements to  2d 3d visual */
+   
+}
+.location{
+
+    display: flex;
+    position:relative;
+    align-items: center;
+    margin-left: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: -1px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+.location .KarveNagar{
+    font-weight: 600;
+    color: #3d4152;
+    float: left;
+    padding-bottom: 2px;
+    border-bottom:2px solid  #3d4152;
+    margin-right: 20px;
+}
+
+.location .Pune{
+display: block;
+font-weight: 300;
+padding-left: 5px;
+color:  #686b78;
+}
+ .location .icon{
+    position:absolute;
+    /*An element with position absolute is position relative to the nearest ancestor.*/
+    top:50%;
+    right: -6%;
+    transform: translateY(-50%);
+    color: orangered;
+  font-weight: 700;
+  font-size: 15px;
+}
+ .location .Right-section{
+position: relative;
+
+ }
+
+.Right-section .items{
+
+    display: flex;
+   align-items: center;
+} 
+
+ .Right-section .items li{
+
+     list-style: none;
+     margin-right: 16px;
+     color: #3d4152;
+     font-size: 15px;
+     font-weight: 500;
+    
+}
+
+
+.items .nav-items
+{
+display: flex;
+align-items: center;
+padding-left: 28px;
+position: relative;
+height: 80px;
+cursor: pointer;
+
+}
+.items .nav-items a{
+display: flex;
+align-items: center;
+padding: 10px;
+font-size: 16px;
+color: #3d4152;
+
+
+}
+
+.items .nav-items :hover{
+
+    color:orangered;
+}
+
+span{
+
+    padding-left:11px;
+}
+
+/* pseudo class */
+.Swiggy-logo:hover{ transform:scale(1.1);}                 /*scale property is used for scale the element in larger size */
+   
+
+.KarveNagar:hover{
+    color:orangered;
+    border-bottom: 2px solid orangered;
+}
+
+/* <!--Content-section--> */
+.restaurants .Container{
+    position: relative;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin:0 auto;
+    padding-top: 42px;
+    top: 80px;
+    left: 0px;
+}
+.Container .item-bar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+}
+.number{
+font-weight: 600;
+font-size: 28px;
+margin-top:-3px;
+color:#282c3f;
+
+
+}
+.item-bar::after{
+
+position: absolute;
+content: '';
+left: 0;
+right: 0;
+top: 81px;
+height: 1px;
+background-color: #e9e9eb;
+
+
+}
+
+.filters{
+display:flex;
+align-items: center;
+}
+
+.filters div{
+font-size: 15px;
+font-weight: 300;
+color: #686b78;
+margin-left:35px;
+cursor: pointer;
+
+
+}
+
+.filters div:hover{
+border-bottom: 1px solid #282c3f;
+padding-bottom: 15px;
+
+
+}
+
+
+/*"restaurant-Section"*/
+
+/* .restaurant-list*/
+.restaurant-list {
+display: flex;
+grid-template-columns:repeat(4,25%);     /*Grid-template-columns property is used for to show that the total number of grids are in the columns in bracket repeat and the values*/
+justify-content:space-between;
+margin-bottom: 80px;
+padding-top: 35px;
+margin: 1px;
+}
+
+.restaurant-list .Place-link{
+    background-color: #fff;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.restaurant-list .list-item{
+padding:25px 25px 50px;   /* Top ,Right and left, Bottom these are values for boxmodel*/
+border: 1px solid #fff;
+contain: content;
+
+}
+
+.restaurant-list .list-item:hover{
+    border-color: #d3d5df;
+    box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+}
+ 
+.item-content{
+
+    width:254px;
+    position: relative;    /*the parent of item-content is list item the child will be follow the position of parent */
+}
+
+.top-image{
+    position: relative;
+    background-color: #eef0f5;
+    width: 254px;
+    height: 160px;
+}
+ 
+/* status promoted */
+.promo-status{
+ position: absolute;
+ left: -8px;
+ top: 0;   
+ font-size: 13px;
+ font-weight:500 ;
+text-transform: uppercase;
+padding:5px 9px 4px ;
+max-width: 50%;
+background-color: rgb(58, 60, 65);
+color: white;
+
+}
+
+.promo-status::before{
+    position:absolute;      /*An element that means here promo-status with position absolute is positioned relative to the nearest positioned ancestor*/
+    border-width:9px 0px 0px 9px;
+    bottom:-9px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: inherit;   /*because the child will take the color of parent */
+    left: 0;
+}
+
+.place-name-div{
+
+    margin-top: 14px;
+}
+
+.place-name-div .name{
+    font-size: 17px;
+    font-weight: 500;
+    word-break: break-word;
+
+
+}
+
+.place-name-div .food-list{
+
+    color: #686b78;
+    font-size: 13px;
+    margin-top: 4px
+}
+
+/* Information-section */
+.info-div {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    font-size: 12px;
+    justify-content: space-between;
+    color: #535665;
+    font-weight: 300;
+}
+
+.info-div .ratings{
+
+    background-color: #48c479;
+    color: white;
+    height: 20px;
+    width: 40px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    
+}
+
+.info-div .dot{
+
+    font-weight: 700;
+    color: inherit;
+}
+
+/* offers-section */
+.offers{
+
+    border-top: 1px solid #e9e9eb;
+    padding-top: 14px;
+    margin-top: 14px;
+    color: #8a584b;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+
+}
+
+/* offers-Text */
+.sNAfh{
+
+font-weight: 400;
+font-size: 15px;
+line-height: 1.3;
+
+
+}
+
+.place:hover .quick-view {
+visibility:  visible !important;
+
+}
+
+.quick-view {
+    color: #686b78;
+    font-size: 13px;
+    visibility: hidden;
+    border-top: 1px solid #e9e9eb;
+    padding-top: 15px;
+    margin-top: 14px;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 14px;
+
+}
+.quick-view-btn{
+color:#5d8ed5;
+display:block;
+text-transform: uppercase;
+font-weight:700 ;
+text-align: center;
+
+
+}
+
+.quick-view-btn:hover{
+color:#686b78;
+
+}
+
+/* <!--Footer-section--> */
+
+.footer{
+background-color: #000;
+padding: 0 20px;
+z-index:10;
+min-height: 298px;
+width:100%;
+color:#fff;
+margin-top: 150px;
+
+
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin:0 auto;
+    padding:76px 0;
+
+}
+
+.points{
+    color:#808080 ;
+    font: 15px;
+    font-weight: 600;
+    min-width: 300px;
+    margin: 26px 0px 10px 15px;
+    padding-right: 20px;
+
+
+
+}
+
+.footer-li{
+padding: 20px 10px 2px 0 ;
+
+
+}
+
+.points ul {
+    list-style: none;
+    display: flex;         /*Display:flex by defualt thats why we added flex-direction property in column*/
+    flex-direction: column;
+    
+   
+
+
+}
+.footer-li a{
+
+    text-decoration: none;
+    color: #fff;
+    font-size:15px;
+    font-weight:300;
+}
+
+.footer-li a:hover{
+
+font-weight: 600;
+
+}
+
+.img{
+    margin-top: 26px;
+    cursor: pointer;
+    transition: transform 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+.img:hover{ transform:scale(1.1);
+
+}
+
+.footer-contact{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 29px 0;   
+}
+
+.swiggy{
+ 
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: -.6px;
+}
+
+
+.social-media{
+    margin-right: 50px;
+    display: inline;
+    transition: transform 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.social-media :hover{
+    transform:scale(1.1);
+   
+}
